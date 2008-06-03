@@ -1,5 +1,5 @@
-#
 Summary:	Destroy data on disk using DoD 5520.22-M or NNSA NAP-14.x algorithms
+Summary(pl.UTF-8):	Niszczenie danych na dysku przy użyciu algorytmu DoD 5520.22-M lub NNSA NAP-14.x
 Name:		scrub
 Version:	1.9
 Release:	1
@@ -21,6 +21,18 @@ system is full, then scrubbed as in 2).
 
 Scrub implements user-selectable pattern algorithms that are compliant
 with DoD 5520.22-M or NNSA NAP-14.x.
+
+%description -l pl.UTF-8
+To narzędzie pisze po plikach lub urządzeniach dyskowych wzorce, aby
+utrudnić odzyskanie danych. Działa w jednym z trzech trybów: 1) czyści
+plik specjalny odpowiadający całemu dyskowi, niszcząc w ten sposób
+wszystkie dane na nim; 2) czyści zwykły plik, niszcząc tylko dane z
+tego pliku (i opcjonalnie jego nazwę w katalogu); 3) tworzy zwykły
+plik, powiększa go do wypełnienia systemu plików, a następnie go
+czyści w sposób 2).
+
+scrub implementuje algorytmy z wzorcem obieralnym przez użytkownika,
+zgodne z DoD 5520.22-M lub NNSA NAP-14.x.
 
 %prep
 %setup -q
