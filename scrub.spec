@@ -3,8 +3,8 @@ Summary(pl.UTF-8):	Niszczenie danych na dysku przy użyciu algorytmu DoD 5520.22
 Name:		scrub
 Version:	1.9
 Release:	1
-License:	GPL
-Group:		Applications
+License:	GPL v2+
+Group:		Applications/File
 Source0:	http://dl.sourceforge.net/diskscrub/%{name}-%{version}.tar.bz2
 # Source0-md5:	597a9c55aa031f2650546becf24cb2b0
 URL:		https://computing.llnl.gov/linux/scrub.html
@@ -54,6 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog NEWS DISCLAIMER COPYING
+%doc ChangeLog DISCLAIMER NEWS
 %attr(755,root,root) %{_bindir}/scrub
-%{_mandir}/man*/*
+%{_mandir}/man1/scrub.1*
