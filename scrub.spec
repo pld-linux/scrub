@@ -1,12 +1,12 @@
 Summary:	Destroy data on disk using DoD 5520.22-M or NNSA NAP-14.x algorithms
 Summary(pl.UTF-8):	Niszczenie danych na dysku przy użyciu algorytmu DoD 5520.22-M lub NNSA NAP-14.x
 Name:		scrub
-Version:	1.9
+Version:	2.2
 Release:	1
 License:	GPL v2+
 Group:		Applications/File
-Source0:	http://dl.sourceforge.net/diskscrub/%{name}-%{version}.tar.bz2
-# Source0-md5:	597a9c55aa031f2650546becf24cb2b0
+Source0:	http://diskscrub.googlecode.com/files/%{name}-%{version}.tar.bz2
+# Source0-md5:	1796abff2cd82243fcd8c757e37c9299
 URL:		https://computing.llnl.gov/linux/scrub.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,16 +38,15 @@ zgodne z DoD 5520.22-M lub NNSA NAP-14.x.
 %setup -q
 
 %build
+%configure
 %{__make} \
 	CFLAGS="%{rpmcflags}" \
 	LDFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_mandir}/man1
-install -s scrub $RPM_BUILD_ROOT%{_bindir}
-install scrub.1 $RPM_BUILD_ROOT%{_mandir}/man1
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
