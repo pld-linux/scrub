@@ -8,6 +8,7 @@ Group:		Applications/File
 Source0:	http://diskscrub.googlecode.com/files/%{name}-%{version}.tar.bz2
 # Source0-md5:	1796abff2cd82243fcd8c757e37c9299
 URL:		https://computing.llnl.gov/linux/scrub.html
+BuildRequires:	perl-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
