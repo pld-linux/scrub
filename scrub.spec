@@ -1,13 +1,13 @@
 Summary:	Destroy data on disk using DoD 5520.22-M or NNSA NAP-14.x algorithms
 Summary(pl.UTF-8):	Niszczenie danych na dysku przy użyciu algorytmu DoD 5520.22-M lub NNSA NAP-14.x
 Name:		scrub
-Version:	2.4
+Version:	2.4.1
 Release:	1
 License:	GPL v2+
 Group:		Applications/File
-Source0:	http://diskscrub.googlecode.com/files/%{name}-%{version}.tar.bz2
-# Source0-md5:	653b9698a7e62fd0c22704e1d6a3469c
-URL:		https://computing.llnl.gov/linux/scrub.html
+Source0:	http://diskscrub.googlecode.com/files/%{name}-%{version}.tar.gz
+# Source0-md5:	852d0051837e58a902097d3ff5356a3a
+URL:		http://code.google.com/p/diskscrub/
 BuildRequires:	perl-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
